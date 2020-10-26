@@ -41,11 +41,39 @@ Expected OUTPUT for this sample
   ]
 
 */
+const foods =  [
+  {
+    food: 'Bacon',
+    isVegetarian: false
+  },
+  {
+    food: 'Sausage',
+    isVegetarian: false
+  },
+  {
+    food: 'Tofu',
+    isVegetarian: true
+  },
+  {
+    food: 'Chick Pea',
+    isVegetarian: true
+  }
+];
 
 function getFoodCategories(foods) {
-}
+  return foods.map(element =>{
+    if(element.isVegetarian === false){
+    return `${element.food} is not suitable for vegetarians`
+    }
+    else
+    {
+    return `${element.food} is suitable for vegetarians`
+    }
+  }
+  )
+};
 
-
-
+getFoodCategories(foods)
+console.log(getFoodCategories(foods))
 // DON'T TOUCH THIS!
 module.exports = getFoodCategories;

@@ -25,8 +25,20 @@ Expected OUTPUT for this sample:
 
 */
 
-function keepStarks(names) {
+const names =   [
+  'Bran Stark',
+  'Cersei Lannister',
+  'Sandor Clegane',
+  'Arya Stark',
+  'Yara Greyjoy',
+  'Sansa Stark'
+];
+
+function keepStarks(names) { 
+  return names.filter( name => name[5] === 'S' || name[6] === 'S');
 }
+
+keepStarks(names)
 
 // DON'T TOUCH THIS!
 module.exports = keepStarks;
